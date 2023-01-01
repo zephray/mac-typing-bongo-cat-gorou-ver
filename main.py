@@ -183,32 +183,34 @@ modflag = {
 
 root = tk.Tk()
 # Hide the root window drag bar and close button
-root.overrideredirect(True)
+#root.overrideredirect(True)
+#root.overrideredirect(False)
 # Make the root window always on top
 root.wm_attributes("-topmost", True)
 # Turn off the window shadow
 root.wm_attributes("-transparent", True)
 # Set the root window background color to a transparent color
-root.config(bg='systemTransparent')
+#root.config(bg='systemTransparent')
 
 root.geometry("+300+300")
 
 # Store the PhotoImage to prevent early garbage collection
 # root.image0 = tk.PhotoImage(file="z.gif")
 root.image = [
-    tk.PhotoImage(file="res/00.gif"),
-    tk.PhotoImage(file="res/01.gif"),
-    tk.PhotoImage(file="res/02.gif")],[
-    tk.PhotoImage(file="res/10.gif"),
-    tk.PhotoImage(file="res/11.gif"),
-    tk.PhotoImage(file="res/12.gif")],[
-    tk.PhotoImage(file="res/20.gif"),
-    tk.PhotoImage(file="res/21.gif"),
-    tk.PhotoImage(file="res/22.gif")];
+    tk.PhotoImage(file="res/00.png"),
+    tk.PhotoImage(file="res/02.png"),
+    tk.PhotoImage(file="res/01.png")],[
+    tk.PhotoImage(file="res/10.png"),
+    tk.PhotoImage(file="res/12.png"),
+    tk.PhotoImage(file="res/11.png")],[
+    tk.PhotoImage(file="res/20.png"),
+    tk.PhotoImage(file="res/22.png"),
+    tk.PhotoImage(file="res/21.png")];
 # Display the image on a label
 label = tk.Label(root, image=root.image[0][0])
 # Set the label background color to a transparent color
-label.config(bg='systemTransparent')
+#label.config(bg='systemTransparent')
+label.config(bg='#aaaaaa')
 label.pack()
 
 
