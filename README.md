@@ -1,10 +1,8 @@
-# mac-typing-cat
+# mac-typing-cat-gorou-ver
 
-<img src="example.jpg" alt="use example" style="zoom: 50%;" />
+<img src="res/00.png" alt="use example" style="zoom: 50%;" />
 
-**NOTICE: This code has been reported by many to have compatibility issues. Use at your own risk.**
-
-A lovely cat that types for you. It's used as streaming overlay, with a borderless transparent background. You can also reskin it (and change the keys in `main.py`) to turn it into a mania-cat.
+This is a fork of the mac-typing-cat. This fork disables the transparent window to allow it to work under macOS 11+. You will need Python downloaded from python website instead of the macOS bundled TK. This fork also includes gorou skin instead of original bongo cat.
 
 works for **macOS only**. For Windows / Linux, check out [bongocat-osu](https://github.com/kuroni/bongocat-osu).
 
@@ -34,39 +32,11 @@ ERROR: Unable to create event tap.
 
 You need to allow `Terminal` to control your computer by going to `System Preferences.app > Security & Privacy > Privacy > Accessibility` and check on `Terminal`.
 
-Note that it's not floating on top of all windows automatically. You need to capture it separately in your streaming software (e.g. Window capture in OBS) and adjust its size / position.
-
-## Known bugs
-
-Image ghosting.
-
-works fine for images with identical outlines.
-
-## Some Bug Fixes.
-
-If your window is completly transparent or is not loading, Look for these lines of code and add # before the lines for the following:
-
-`root.overrideredirect(True)`
-
-`root.wm_attributes("-topmost", True)`
-
-It should look like this.
-
-```# Hide the root window drag bar and close button
-#root.overrideredirect(True)
-# Make the root window always on top
-#root.wm_attributes("-topmost", True)
-```
-
-If you do not have administrator access and your pip is replying with something related to: 
-Has No permission to Install to /Where/python3/is/installed/ then add the --user option to the end of the pip install packages module.
-it should look like this:
-
-```python3 -m pip install pyobjc-framework-ApplicationServices pyobjc-framework-CoreText --user```
+Note that it's not floating on top of all windows automatically. The transparent option is also broken. You need to capture it separately in your streaming software (e.g. Window capture in OBS) and adjust its size / position and enable color key.
 
 ## License
 
-The cat image is from [bongo.cat](https://bongo.cat/) by Eric Huber (@Externalizable). Art courtesy of @StrayRogue. Meme by @DitzyFlama.
+The original cat image is from [bongo.cat](https://bongo.cat/) by Eric Huber (@Externalizable). Original art courtesy of @StrayRogue. Meme by @DitzyFlama. Gorou is a character from Genshin Impact by Mihoyo. Modified art by @ZephRay.
 
 Codes copied from other websites or projects (see comment in code) may have their own license.
 
